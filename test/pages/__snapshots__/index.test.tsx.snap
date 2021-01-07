@@ -2,120 +2,152 @@
 
 exports[`Home page matches snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="jsx-2250570153 container"
-  >
-    <main
-      class="jsx-2250570153"
-    >
-      <h1
-        class="jsx-2250570153 title"
-      >
-        Welcome to 
-        <a
-          class="jsx-2250570153"
-          href="https://nextjs.org"
-        >
-          Next.js!
-        </a>
+  <div>
+    <main>
+      <h1>
+        Listening to the 500 best albums of all time accordinig to the 
+        <em>
+          Rolling Stone
+        </em>
       </h1>
-      <p
-        class="jsx-2250570153 description"
-      >
-        Get started by editing 
-        <code
-          class="jsx-2250570153"
+      <ul>
+        <li
+          itemscope=""
+          itemtype="https://schema.org/MusicAlbum"
         >
-          pages/index.tsx
-        </code>
-      </p>
-      <button
-        class="jsx-2250570153"
-      >
-        Test Button
-      </button>
-      <div
-        class="jsx-2250570153 grid"
-      >
-        <a
-          class="jsx-2250570153 card"
-          href="https://nextjs.org/docs"
-        >
-          <h3
-            class="jsx-2250570153"
+          <h2>
+            <span
+              itemprop="name"
+            >
+              Sgt. Pepper’s Lonely Hearts Club Band
+            </span>
+             by 
+            <span
+              itemprop="byArtist"
+              itemscope=""
+              itemtype="https://schema.org/MusicGroup"
+            >
+              <span
+                itemprop="name"
+              >
+                The Beatles
+              </span>
+            </span>
+          </h2>
+          <time
+            itemprop="copyrightYear"
           >
-            Documentation →
-          </h3>
-          <p
-            class="jsx-2250570153"
-          >
-            Find in-depth information about Next.js features and API.
+            1967
+          </time>
+          <meta
+            content="rock"
+            itemprop="genre"
+          />
+          <p>
+            I was not expecting too much from something so overrated, but I actually liked this one! I can see how this was considered very new back then.
+
           </p>
-        </a>
-        <a
-          class="jsx-2250570153 card"
-          href="https://nextjs.org/learn"
+          <dl>
+            <dt>
+              Favourite song
+            </dt>
+            <dd>
+              <a
+                href="https://open.spotify.com/track/0xIuNHHcKI1JDuBPlSwzb1?si=srfQmlvFRGOQNpVTLEja4w"
+              >
+                Good Morning Good Morning
+              </a>
+            </dd>
+            <dt>
+              <em>
+                Rolling Stone
+              </em>
+               rank
+            </dt>
+            <dd>
+              1
+            </dd>
+            <dt>
+              My rating
+            </dt>
+            <dd>
+              7
+            </dd>
+          </dl>
+          <a
+            href="https://open.spotify.com/album/6QaVfG1pHYl1z15ZxkvVDW?si=BgpNjUoeRc-W4JXoea-Urw"
+            itemprop="url"
+          >
+            Listen to 
+            <em>
+              Sgt. Pepper’s Lonely Hearts Club Band
+            </em>
+             on Spotify
+          </a>
+        </li>
+        <li
+          itemscope=""
+          itemtype="https://schema.org/MusicAlbum"
         >
-          <h3
-            class="jsx-2250570153"
+          <h2>
+            <span
+              itemprop="name"
+            >
+              Pet Sounds
+            </span>
+             by 
+            <span
+              itemprop="byArtist"
+              itemscope=""
+              itemtype="https://schema.org/MusicGroup"
+            >
+              <span
+                itemprop="name"
+              >
+                The Beach Boys
+              </span>
+            </span>
+          </h2>
+          <time
+            itemprop="copyrightYear"
           >
-            Learn →
-          </h3>
-          <p
-            class="jsx-2250570153"
-          >
-            Learn about Next.js in an interactive course with quizzes!
+            1966
+          </time>
+          <p>
+            Couple of OK songs you expect to hear on your dad’s radio, but didn’t get through the filter.
+
           </p>
-        </a>
-        <a
-          class="jsx-2250570153 card"
-          href="https://github.com/vercel/next.js/tree/master/examples"
-        >
-          <h3
-            class="jsx-2250570153"
+          <dl>
+            <dt>
+              <em>
+                Rolling Stone
+              </em>
+               rank
+            </dt>
+            <dd>
+              2
+            </dd>
+            <dt>
+              My rating
+            </dt>
+            <dd>
+              3
+            </dd>
+          </dl>
+          <a
+            href="https://open.spotify.com/album/6GphKx2QAPRoVGWE9D7ou8?si=IIJXKha-TfmsvunzqaSG1A"
+            itemprop="url"
           >
-            Examples →
-          </h3>
-          <p
-            class="jsx-2250570153"
-          >
-            Discover and deploy boilerplate example Next.js projects.
-          </p>
-        </a>
-        <a
-          class="jsx-2250570153 card"
-          href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-        >
-          <h3
-            class="jsx-2250570153"
-          >
-            Deploy →
-          </h3>
-          <p
-            class="jsx-2250570153"
-          >
-            Instantly deploy your Next.js site to a public URL with Vercel.
-          </p>
-        </a>
-      </div>
+            Listen to 
+            <em>
+              Pet Sounds
+            </em>
+             on Spotify
+          </a>
+        </li>
+      </ul>
     </main>
-    <footer
-      class="jsx-2250570153"
-    >
-      <a
-        class="jsx-2250570153"
-        href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        Powered by 
-        <img
-          alt="Vercel Logo"
-          class="jsx-2250570153 logo"
-          src="/vercel.svg"
-        />
-      </a>
-    </footer>
+    <footer />
   </div>
 </DocumentFragment>
 `;

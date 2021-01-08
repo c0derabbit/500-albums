@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 
 import Album, { AlbumData } from '../components/album'
 import by from '../helpers/sort-by'
@@ -11,9 +11,20 @@ export interface AlbumEntry {
 }
 
 export const Home: React.FC<{ albums: AlbumEntry[] }> = ({ albums }) => {
-  const [sortedAlbums] = useState(
-    [...albums].sort(by('createdTime', { reverse: true }))
+  const [reverse, setReverse] = useState(true)
+  const [sorter, setSorter] = useState<string>('createdTime')
+  const [sortedAlbums, setSortedAlbums] = useState(
+    [...albums].sort(by(sorter, { reverse }))
   )
+
+  const sort = useCallback((e: React.ChangeEvent<HTMLSelectElement>) => {
+    setSorter(e.target.value)
+    setReverse(false)
+  }, [])
+
+  useEffect(() => {
+    setSortedAlbums([...albums].sort(by(sorter, { reverse })))
+  }, [sorter, reverse])
 
   return (
     <div>
@@ -22,6 +33,24 @@ export const Home: React.FC<{ albums: AlbumEntry[] }> = ({ albums }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
+        <select onChange={sort}>
+          <option value="createdTime">date added</option>
+          <option value="fields.title">title</option>
+          <option value="fields.artist">artist</option>
+          <option value="fields.year">year</option>
+          <option value="fields.rank">Rolling Stone rank</option>
+          <option value="fields.rating">my rating</option>
+        </select>
+        <label>
+          <input
+            type="checkbox"
+            onChange={() => {
+              setReverse(!reverse)
+            }}
+            checked={reverse}
+          />
+          reverse
+        </label>
         <h1>
           Listening to the 500 best albums of all time accordinig to the{' '}
           <em>Rolling Stone</em>

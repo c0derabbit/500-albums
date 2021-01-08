@@ -4,6 +4,45 @@ exports[`Home page matches snapshot 1`] = `
 <DocumentFragment>
   <div>
     <main>
+      <select>
+        <option
+          value="createdTime"
+        >
+          date added
+        </option>
+        <option
+          value="fields.title"
+        >
+          title
+        </option>
+        <option
+          value="fields.artist"
+        >
+          artist
+        </option>
+        <option
+          value="fields.year"
+        >
+          year
+        </option>
+        <option
+          value="fields.rank"
+        >
+          Rolling Stone rank
+        </option>
+        <option
+          value="fields.rating"
+        >
+          my rating
+        </option>
+      </select>
+      <label>
+        <input
+          checked=""
+          type="checkbox"
+        />
+        reverse
+      </label>
       <h1>
         Listening to the 500 best albums of all time accordinig to the 
         <em>

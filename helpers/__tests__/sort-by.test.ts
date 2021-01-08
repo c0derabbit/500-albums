@@ -5,12 +5,12 @@ describe('sortBy', () => {
     {
       id: 'first',
       createdTime: '2021-01-06T19:11:26.000Z',
-      fields: { title: 'foo', rating: 8 },
+      fields: { title: 'foo', rating: 8, artist: 'The Beatles' },
     },
     {
       id: 'second',
       createdTime: '2021-01-12T19:11:26.000Z',
-      fields: { title: 'bar', rating: 8 },
+      fields: { title: 'bar', rating: 8, artist: 'Foo Fighters' },
     },
   ]
 
@@ -49,5 +49,12 @@ describe('sortBy', () => {
 
     expect(firstReverse).toEqual(albums[0])
     expect(secondReverse).toEqual(albums[1])
+  })
+
+  it('ignores ‘The’ in band names', () => {
+    const [first, second] = [...albums].sort(by('fields.artist'))
+
+    expect(first).toEqual(albums[0])
+    expect(second).toEqual(albums[1])
   })
 })

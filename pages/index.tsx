@@ -2,20 +2,18 @@ import Head from 'next/head'
 import { useState } from 'react'
 
 import Album, { AlbumData } from '../components/album'
+import by from '../helpers/sort-by'
 
-interface AlbumEntry {
+export interface AlbumEntry {
   id: string
   fields: AlbumData
   createdTime: string
 }
 
-const toDate = (dateString: string) => new Date(dateString).getTime()
-
-const byDateAdded = (a: AlbumEntry, b: AlbumEntry) =>
-  toDate(b.createdTime) - toDate(a.createdTime)
-
-export const Home: React.FC<{ albums: AlbumEntry[] }> = ({ albums = [] }) => {
-  const [sortedAlbums] = useState(albums.sort(byDateAdded))
+export const Home: React.FC<{ albums: AlbumEntry[] }> = ({ albums }) => {
+  const [sortedAlbums] = useState(
+    [...albums].sort(by('createdTime', { reverse: true }))
+  )
 
   return (
     <div>
